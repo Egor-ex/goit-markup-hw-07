@@ -524,23 +524,18 @@
           </div>
 
           <div class="modal-form__checkbox">
-            <label class="modal-form__label-checkbox" for="user-checkbox">
-              Соглашаюсь с рассылкой и принимаю
-              <a class="modal-form__checkbox-link" href="#">Условия договора</a>
-            </label>
-            <input
-              class="modal-form__input-checkbox visually-hidden"
-              type="checkbox"
-              name="user-checkbox"
-              id="user-checkbox"
-              required
-            />
-            <div class="box">
-              <svg class="modal-form__icon-checkbox" width="11" height="8">
+            <input class="modal-form__input-checkbox is-hidden" type="checkbox" name="user-checkbox" id="checkbox" />
+            <label class="modal-form__label-checkbox" for="checkbox">
+              <svg class="modal-form__icon-checkbox" width="11px" height="8px">
                 <use href="./images/symbol-defs.svg#icon-check"></use>
               </svg>
-            </div>
+              <span class="modal-form__text-checkbox">
+                Соглашаюсь с рассылкой и принимаю
+                <a href="#" class="modal-form__link-checkbox">Условия договора </a>
+              </span>
+            </label>
           </div>
+
           <button class="footer-form__submit modal-form__form-btn" type="submit">Отправить</button>
         </form>
       </div>

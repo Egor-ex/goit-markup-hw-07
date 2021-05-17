@@ -361,7 +361,6 @@ h3 {
   align-items: center;
   position: absolute;
   margin: 0;
-  padding: 0;
   width: 370px;
   height: 70px;
   padding: 27px 82px;
@@ -665,6 +664,7 @@ img {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: var(--secondary-bg-color);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* Кнопки */
@@ -708,7 +708,6 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
   margin: 0;
   font-weight: 700;
   font-size: 16px;
@@ -783,7 +782,6 @@ img {
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
-  pointer-events: none;
   transform: scale(0.9);
 }
 
@@ -874,43 +872,54 @@ img {
 }
 
 .modal-form__checkbox {
+  position: relative;
   display: flex;
-  flex-direction: row-reverse;
-}
-
-.modal-form__label-checkbox {
+  align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
-.modal-form__checkbox-link {
-  color: var(--acent-color);
-}
-
-.modal-form__input-checkbox:checked ~ .box {
-  border-color: transparent;
-  background-color: var(--acent-color);
-}
-
-.modal-form__input-checkbox:checked ~ .box .modal-form__icon-checkbox {
-  opacity: 1;
-}
-
-.box {
+.modal-form__input-checkbox:checked + .modal-form__label-checkbox::before {
+  content: '';
   display: flex;
-  position: relative;
+  background-color: var(--acent-color);
+  border: 2px solid var(--acent-color);
+  border-radius: 3px;
   width: 16px;
   height: 16px;
-  margin-right: 7px;
-  border: 2px solid #212121;
-  border-radius: 2px;
-  transition: background-color var(--time-ms) var(--time-use), border-color var(--time-ms) var(--time-use);
 }
 
 .modal-form__icon-checkbox {
   position: absolute;
-  top: 2px;
-  left: 1px;
-  opacity: 0;
-  transition: opacity var(--time-ms) var(--time-use);
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+}
+
+.modal-form__text-checkbox {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+
+.modal-form__label-checkbox {
+  display: flex;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+.modal-form__label-checkbox::before {
+  content: '';
+  display: flex;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 3px;
+  margin-right: 8px;
+}
+
+.modal-form__link-checkbox {
+  color: var(--acent-color);
 }
 /*# sourceMappingURL=main.css.map */
